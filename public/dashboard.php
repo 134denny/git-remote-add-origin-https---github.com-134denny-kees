@@ -8,6 +8,15 @@ if (!isUserLoggedIn()) {
     exit();
 }
 
+if (!isUserAdmin()) {
+    // Redirect to the home page or an error page
+    header("Location: /error.php");
+    exit();
+}
+
+// Get the logged-in user's ID
+$user_id = getLoggedInUserId();
+
 // Handle CRUD operations for cars
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['create'])) {
@@ -17,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $number = $_POST['number'];
         $last_used = $_POST['last_used'];
 
-        $stmt = $pdo->prepare("INSERT INTO cars (km_stand, name, number, last_used, is_active) VALUES (?, ?, ?, ?, 0)");
-        $stmt->execute([$km_stand, $name, $number, $last_used]);
+        $stmt = $pdo->prepare("INSERT INTO cars (km_stand, name, number, last_used, is_active, user_id) VALUES (?, ?, ?, ?, 0, ?)");
+        $stmt->execute([$km_stand, $name, $number, $last_used, $user_id]);
 
     } elseif (isset($_POST['update'])) {
         // Update car
@@ -29,22 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $last_used = $_POST['last_used'];
         $is_active = isset($_POST['is_active']) ? 1 : 0;
 
-        $stmt = $pdo->prepare("UPDATE cars SET km_stand = ?, name = ?, number = ?, last_used = ?, is_active = ? WHERE id = ?");
-        $stmt->execute([$km_stand, $name, $number, $last_used, $is_active, $id]);
+        $stmt = $pdo->prepare("UPDATE cars SET km_stand = ?, name = ?, number = ?, last_used = ?, is_active = ? WHERE id = ? AND user_id = ?");
+        $stmt->execute([$km_stand, $name, $number, $last_used, $is_active, $id, $user_id]);
 
     } elseif (isset($_POST['delete'])) {
         // Delete car
         $id = $_POST['id'];
 
-        $stmt = $pdo->prepare("DELETE FROM cars WHERE id = ?");
-        $stmt->execute([$id]);
+        $stmt = $pdo->prepare("DELETE FROM cars WHERE id = ? AND user_id = ?");
+        $stmt->execute([$id, $user_id]);
 
     } elseif (isset($_POST['activate'])) {
         // Activate cars
         $ids = $_POST['car_ids'];
-        $ids = implode(',', array_map('intval', $ids)); // Convert to comma-separated list
-        $stmt = $pdo->prepare("UPDATE cars SET is_active = 1 WHERE id IN ($ids)");
-        $stmt->execute();
+        $ids = implode(',', array_map('intval', $ids));
+        $stmt = $pdo->prepare("UPDATE cars SET is_active = 1 WHERE id IN ($ids) AND user_id = ?");
+        $stmt->execute([$user_id]);
 
     } elseif (isset($_POST['add_repair'])) {
         // Add repair
@@ -64,9 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Fetch only active cars
-$stmt = $pdo->query("SELECT * FROM cars WHERE is_active = 1");
+// Fetch only the logged-in user's active cars
+$stmt = $pdo->prepare("SELECT * FROM cars WHERE is_active = 1 AND user_id = ?");
+$stmt->execute([$user_id]);
 $cars = $stmt->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -186,7 +197,7 @@ $cars = $stmt->fetchAll();
                 <select multiple name="car_ids[]">
                     <?php
                     // Fetch inactive cars for activation
-                    $stmt = $pdo->query("SELECT id, name FROM cars WHERE is_active = 0");
+                    $stmt = $pdo->query("SELECT * FROM cars WHERE is_active = 0 AND user_id = ?");
                     $inactiveCars = $stmt->fetchAll();
                     foreach ($inactiveCars as $car): ?>
                         <option value="<?= $car['id'] ?>"><?= htmlspecialchars($car['name']) ?></option>

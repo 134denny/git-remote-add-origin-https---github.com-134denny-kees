@@ -59,22 +59,11 @@ function isUserLoggedIn() {
     return isset($_SESSION['user_id']);
 }
 
-// Function to check if a user's account is active
-function isUserActive($userId) {
-    global $pdo;
-    try {
-        $stmt = $pdo->prepare("SELECT active FROM users WHERE id = ?");
-        $stmt->execute([$userId]);
-        $user = $stmt->fetch();
-        return $user['active'] == 1;
-    } catch (Exception $e) {
-        error_log('Error checking if user is active: ' . $e->getMessage());
-        return false;
-    }
+function getLoggedInUserId() {
+    return $_SESSION['user_id'] ?? null;
 }
 
-// Function to check if a user is an admin
-function isAdmin() {
+function isUserAdmin() {
     global $pdo;
     if (isUserLoggedIn()) {
         try {
@@ -84,6 +73,22 @@ function isAdmin() {
             return $user['is_admin'] == 1;
         } catch (Exception $e) {
             error_log('Error checking admin status: ' . $e->getMessage());
+            return false;
+        }
+    }
+    return false;
+}
+
+function isUserSuperAdmin() {
+    global $pdo;
+    if (isUserLoggedIn()) {
+        try {
+            $stmt = $pdo->prepare("SELECT is_super_admin FROM users WHERE id = ?");
+            $stmt->execute([$_SESSION['user_id']]);
+            $user = $stmt->fetch();
+            return $user['is_super_admin'] == 1;
+        } catch (Exception $e) {
+            error_log('Error checking super admin status: ' . $e->getMessage());
             return false;
         }
     }
