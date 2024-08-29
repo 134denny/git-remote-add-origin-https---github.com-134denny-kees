@@ -82,16 +82,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h2 class="mb-0">Welkom bij KEESS</h2>
-                <p class="lead">KEESS is dé oplossing voor groter wordende autocollecties! Met KEESS hopen wij het administratieve deel van het managen van een autoverzameling te vereenvoudigen. Ons systeem biedt u een overzichtelijke manier om uw voertuigen en hun onderhoud te beheren.</p>
+                <br>
+                <p class="">KEESS is dé oplossing voor groter wordende autocollecties! Met KEESS hopen wij het administratieve deel van het managen van een autoverzameling te vereenvoudigen. Ons systeem biedt u een overzichtelijke manier om uw voertuigen en hun onderhoud te beheren.</p>
                 
-                <p>Voor meer informatie, kijk op de <a href="product.php" class="text-primary text-decoration-none">productpagina</a>.</p>
+                <p>Voor meer informatie, kijk op de <a href="product.php">productpagina</a>.</p>
             </div>
         </div>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/home1.jpeg" alt="First slide">
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/home2.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/home3.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
     <!-- Bootstrap 5 JS en Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap JS en dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
