@@ -9,7 +9,4 @@ if (isset($_SESSION['user_id'])):
     </nav>
 </header>
 <?php endif; ?>
-<?php if (isUserSuperAdmin()): ?>
-        <!-- Button visible only to super admins -->
-        <a href="admin.php">admin</a>
-<?php endif; ?>
+
