@@ -33,6 +33,7 @@ include '../includes/public_header.php';
                 <label for="message">Bericht</label>
                 <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
             </div>
+            <br>
             <button type="submit" class="btn btn-primary">Stuur bericht</button>
         </form>
     </div>

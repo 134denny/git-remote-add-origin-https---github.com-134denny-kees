@@ -61,7 +61,7 @@ Het sleutelkastje, in dit sleutelkastje zit een  Arduino ingebouwd die diverse f
       <div class="modal-body">
         <!-- Placeholder for photo -->
         <div class="text-center mb-3">
-          <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Product Photo">
+          <img src="img/wesbsite.jpg" class="img-fluid" alt="Keybox Photo">
         </div>
         <p>De website heeft de volgende functies:</p>
         <ul>
@@ -96,7 +96,7 @@ Het sleutelkastje, in dit sleutelkastje zit een  Arduino ingebouwd die diverse f
       <div class="modal-body">
         <!-- Placeholder for photo -->
         <div class="text-center mb-3">
-          <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Keybox Photo">
+          <img src="img/sleutel.jpg" class="img-fluid" alt="Keybox Photo">
         </div>
         <p>Het sleutelkastje heeft de volgende functies:</p>
         <ul>

@@ -80,25 +80,81 @@ $allCars = $stmt->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #343a40; /* Dark background color */
+            color: #f8f9fa; /* Light text color */
+        }
+        .table {
+            background-color: #495057; /* Dark table background */
+            color: #f8f9fa; /* Light text color in table */
+        }
+        .modal-content {
+            background-color: #495057; /* Dark modal background */
+            color: #f8f9fa; /* Light text color in modal */
+        }
+        .form-control, .form-check-label {
+            color: #f8f9fa; /* Light text color for inputs and labels */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker primary button color on hover */
+        }
+        .btn-secondary {
+            background-color: #6c757d; /* Secondary button color */
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Darker secondary button color on hover */
+        }
+        .btn-warning {
+            background-color: #ffc107; /* Warning button color */
+            border: none;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800; /* Darker warning button color on hover */
+        }
+        .btn-info {
+            background-color: #17a2b8; /* Info button color */
+            border: none;
+        }
+        .btn-info:hover {
+            background-color: #117a8b; /* Darker info button color on hover */
+        }
+        .form-control {
+    background-color: #adb5bd; /* Lichtere grijze achtergrondkleur voor invoervelden */
+    color: #343a40; /* Donkergrijze tekstkleur in invoervelden */
+    border: 1px solid #dee2e6; /* Randkleur */
+}
+
+.form-control:focus {
+    background-color: #ced4da; /* Iets lichtere grijze achtergrondkleur bij focus */
+    color: #343a40; /* Donkergrijze tekstkleur bij focus */
+}
+
+    </style>
 </head>
-<body>
+<body class="bg-dark">
     <?php include '../includes/header.php'; ?>
 
     <div class="container mt-5">
         <h1>Car Dashboard</h1>
 
         <!-- Button to open the activate cars modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activateCarsModal">Activate Cars</button>
+        <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#activateCarsModal">Activeer Auto's</button>
 
         <!-- Car List -->
         <table class="table mt-4">
             <thead>
                 <tr>
                     <th>KM Stand</th>
-                    <th>Name</th>
-                    <th>Number</th>
-                    <th>Last Used</th>
-                    <th>Actions</th>
+                    <th>Naam</th>
+                    <th>Nummer</th>
+                    <th>Laatst Gebruikt</th>
+                    <th>Acties</th>
                 </tr>
             </thead>
             <tbody>
@@ -116,12 +172,12 @@ $allCars = $stmt->fetchAll();
                             data-name="<?= htmlspecialchars($car['name']) ?>"
                             data-number="<?= htmlspecialchars($car['number']) ?>"
                             data-last-used="<?= $car['last_used'] ?>"
-                            data-is-active="<?= $car['is_active'] ?>">Edit</button>
+                            data-is-active="<?= $car['is_active'] ?>">Bewerk</button>
 
                         <!-- Button to open the repair modal -->
                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#repairModal"
                             data-car-id="<?= $car['id'] ?>"
-                            data-car-name="<?= htmlspecialchars($car['name']) ?>">View Repairs</button>
+                            data-car-name="<?= htmlspecialchars($car['name']) ?>">Bekijk Reparaties</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -134,7 +190,7 @@ $allCars = $stmt->fetchAll();
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editCarModalLabel">Edit Car</h5>
+                    <h5 class="modal-title" id="editCarModalLabel">Bewerk Auto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -148,15 +204,15 @@ $allCars = $stmt->fetchAll();
                             <input type="number" id="edit_km_stand" name="km_stand" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="edit_name">Name:</label>
+                            <label for="edit_name">Naam:</label>
                             <input type="text" id="edit_name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="edit_number">Number:</label>
+                            <label for="edit_number">Nummer:</label>
                             <input type="text" id="edit_number" name="number" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="edit_last_used">Last Used:</label>
+                            <label for="edit_last_used">Laatst Gebruikt:</label>
                             <input type="date" id="edit_last_used" name="last_used" class="form-control" required>
                         </div>
                         <div class="form-group form-check">
@@ -165,8 +221,8 @@ $allCars = $stmt->fetchAll();
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update Car</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
+                        <button type="submit" class="btn btn-primary">Bewerk Auto</button>
                     </div>
                 </form>
             </div>
@@ -178,7 +234,7 @@ $allCars = $stmt->fetchAll();
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="repairModalLabel">Repairs for <span id="carName"></span></h5>
+                    <h5 class="modal-title" id="repairModalLabel">Reparaties voor: <span id="carName"></span></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -188,20 +244,20 @@ $allCars = $stmt->fetchAll();
                         <input type="hidden" name="add_repair" value="1">
                         <input type="hidden" id="car_id" name="car_id">
                         <div class="form-group">
-                            <label for="repair_description">Repair Description:</label>
+                            <label for="repair_description">Beschrijving Reparatie:</label>
                             <textarea id="repair_description" name="repair_description" class="form-control" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="repair_date">Repair Date:</label>
+                            <label for="repair_date">Datum Reparatie:</label>
                             <input type="date" id="repair_date" name="repair_date" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Repair</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Reparatie Toevoegen</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
                     </form>
 
-                    <h5 class="mt-4">Existing Repairs:</h5>
+                    <h5 class="mt-4">Bestaande Reparaties:</h5>
                     <ul id="repairList" class="list-group">
-                        <!-- Existing repairs will be loaded here via Jav<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</buttonaScript -->
+                        <!-- Existing repairs will be loaded here via JavaScript -->
                     </ul>
                 </div>
             </div>
@@ -213,7 +269,7 @@ $allCars = $stmt->fetchAll();
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="activateCarsModalLabel">Activate Cars</h5>
+                    <h5 class="modal-title" id="activateCarsModalLabel">Activeer Auto's</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -229,8 +285,8 @@ $allCars = $stmt->fetchAll();
                         <?php endforeach; ?>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Activate Selected Cars</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sluit</button>
+                        <button type="submit" class="btn btn-primary">Activeer Geselecteerde Auto's</button>
                     </div>
                 </form>
             </div>
@@ -283,8 +339,8 @@ $allCars = $stmt->fetchAll();
 
         // Function to set today's date as the default value
         function setDefaultDate() {
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('repair_date').value = today;
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('repair_date').value = today;
         }
 
         // Call the function when the page loads

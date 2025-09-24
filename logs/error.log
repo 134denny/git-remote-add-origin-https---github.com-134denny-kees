@@ -404,3 +404,85 @@
 [2024-08-29 13:45:03] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\kees\includes\public_header.php, Line: 25
 [2024-08-29 13:45:03] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\kees\includes\public_header.php, Line: 26
 [2024-08-29 13:45:03] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:13:12] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 24
+[2025-09-24 13:13:12] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 25
+[2025-09-24 13:13:12] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 26
+[2025-09-24 13:13:12] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 27
+[2025-09-24 13:13:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 24
+[2025-09-24 13:13:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 25
+[2025-09-24 13:13:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 26
+[2025-09-24 13:13:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 27
+[2025-09-24 13:13:24] Error: [2] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php:27) - File: C:\xampp\htdocs\portfolio\testproject\test\public\index.php, Line: 15
+[2025-09-24 13:13:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 24
+[2025-09-24 13:13:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 25
+[2025-09-24 13:13:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 26
+[2025-09-24 13:13:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php, Line: 27
+[2025-09-24 13:13:35] Error: [2] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\portfolio\testproject\test\includes\public_header.php:27) - File: C:\xampp\htdocs\portfolio\testproject\test\public\index.php, Line: 15
+[2025-09-24 13:14:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:14:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:14:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:14:24] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:14:28] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:14:28] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:14:28] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:14:28] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:14:28] Error: [2] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php:27) - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 15
+[2025-09-24 13:15:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:15:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:15:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:15:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:15:39] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:15:39] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:15:39] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:15:39] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:16:55] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:16:55] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:16:55] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:16:55] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:16:55] Error: [2] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php:27) - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 15
+[2025-09-24 13:16:57] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:16:57] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:16:57] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:16:57] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:19:40] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:40] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:41] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:41] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:41] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:41] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:42] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:50] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:50] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:51] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:51] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:52] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:19:52] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:20:13] Error: [2] include(./includes/public_header.php): Failed to open stream: No such file or directory - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:20:13] Error: [2] include(): Failed opening './includes/public_header.php' for inclusion (include_path='C:\xampp\php\PEAR') - File: C:\xampp\htdocs\portfolio\projecten\kees\public\index.php, Line: 23
+[2025-09-24 13:21:36] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:21:36] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:21:36] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:21:36] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:22:18] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:22:18] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:22:18] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:22:18] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:22:30] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:22:30] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:22:30] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:22:30] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:22:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:22:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:22:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:22:35] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27
+[2025-09-24 13:22:50] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 24
+[2025-09-24 13:22:50] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 25
+[2025-09-24 13:22:50] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 26
+[2025-09-24 13:22:50] Error: [2] Undefined variable $currentPage - File: C:\xampp\htdocs\portfolio\projecten\kees\includes\public_header.php, Line: 27

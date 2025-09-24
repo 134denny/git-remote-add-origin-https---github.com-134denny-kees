@@ -1,22 +1,26 @@
 <?php
 session_start();
+ob_start(); // Start output buffering to prevent "headers already sent" errors
+
 include_once '../config/db.php';
 include_once '../includes/error_handler.php';
 include_once '../includes/exception_handler.php';
 include_once '../includes/shutdown_function.php';
 include_once '../includes/functions.php';
-include '../includes/public_header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-    
+
     if (loginUser($username, $password)) {
         header("Location: dashboard.php");
+        exit(); // Stop further script execution after a header redirect
     } else {
         echo "Login failed. Invalid username or password.";
     }
 }
+
+include '../includes/public_header.php'; // Include header after handling form submission
 ?>
     <!-- Button trigger modal -->
 
@@ -89,7 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <br>
+
+ <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 50%; margin: auto; margin-bottom: 50px;">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="img/home1.jpeg" alt="First slide">
@@ -103,11 +109,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only"></span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only"></span>
   </a>
 </div>
 

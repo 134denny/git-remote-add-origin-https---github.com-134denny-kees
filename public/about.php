@@ -22,9 +22,9 @@ include '../includes/public_header.php';
             </div>
             <div class="modal-body">
                 <!-- Placeholder voor de foto -->
-                <div class="photo-placeholder mb-3" style="width: 100%; height: 200px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; color: #6c757d; font-size: 1.5rem;">
-                    Foto Placeholder
-                </div>
+                <div class="mb-3 text-center">
+                    <img src="img/wytze.jpg" class="img-fluid rounded" alt="Keybox Photo" style="max-height: 200px; object-fit: contain; width: 100%;">
+                </div> 
                 <!-- Tekst over Wytze Dijkman -->
                 <p>Wytze Dijkman is een student software development. Dit project dient als één van mijn keuzedelen zodat ik dichter bij mijn diploma kan komen. Hiernaast heb ik ook een grote passie voor auto's, voornamelijk Ferrari, en zet ik deze graag op de foto voor de website Autogespot.</p>
                 <div class="d-flex">

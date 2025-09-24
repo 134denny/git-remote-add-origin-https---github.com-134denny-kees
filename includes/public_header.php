@@ -1,11 +1,35 @@
+<?php
+$currentPage = basename($_SERVER['PHP_SELF'], '.php');
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>KEESS</title>
+    <link rel="icon" href="../public/img/icon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">  
+
+    <style>
+    .nav-link.active {
+      border-bottom: 3px solid white;
+        color: white !important;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KEESS",
+    "description": "Software voor het beheren van autocollecties",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://wdijkman.nl"
+    }
+</script>
+
   </head>
   <body class="bg-dark text-white">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -21,7 +45,7 @@
           </div>
 
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../public/index.php" class="nav-link px-2 text-white <?php if($currentPage == 'home'){echo 'active';} ?>">Home</a></li>
+            <li><a href="../public/index.php" class="nav-link px-2 text-white <?php if($currentPage == 'index'){echo 'active';} ?>">Home</a></li>
             <li><a href="../public/product.php" class="nav-link px-2 text-white <?php if($currentPage == 'product'){echo 'active';} ?>">Product</a></li>
             <li><a href="../public/about.php" class="nav-link px-2 text-white <?php if($currentPage == 'about'){echo 'active';} ?>">About</a></li>
             <li><a href="../public/contact.php" class="nav-link px-2 text-white <?php if($currentPage == 'contact'){echo 'active';} ?>">Contact</a></li>
